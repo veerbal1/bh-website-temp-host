@@ -8,7 +8,7 @@ import Layout from "../../component/Wrapper/Layout";
 import Bag from "../../public/bag.png";
 import SunImage from "../../public/images/sun.png";
 import CarImage from "../../public/images/car.png";
-import PostImageFour from "../../public/images/postImage-4.png";
+import PostImageFour from "../../public/images/postimage-4.png";
 import styles from "../../styles/AdStudio.module.scss";
 import { showBodyBeforeElement } from "../../utils";
 
