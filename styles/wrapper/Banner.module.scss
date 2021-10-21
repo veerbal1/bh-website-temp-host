@@ -1,0 +1,23 @@
+@import "../_base";
+
+.banner {
+  position: relative;
+  padding-top: 110px;
+  z-index: 2;
+
+  @include breakpoint(normal) {
+    padding-top: 30px;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint(normal) {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../base";
+@import "../theme/color";
+@import "../theme/fonts";
+
+.swiperSlide{
+    color: #132662;
+    font-family: $karlaBold;
+    font-size: 14px;
+
+    .productSliderProgress{
+        width: 100%;
+        height: 2px;
+        background-color: #f1f1f1;
+        margin-top: 15px;
+
+        .progress{
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            overflow: hidden;
+            background:#FFC001;
+            height: 2px;
+        }
+    }
+}

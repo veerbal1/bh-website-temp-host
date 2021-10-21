@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Karla-Bold";
+  src: url("../public/fonts/my-fonts/karla-bold.woff");
+}
+
+@font-face {
+  font-family: "Karla-Regular";
+  src: url("../public/fonts/my-fonts/karla-regular.woff");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Karla-Regular";
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background: #1f326c;
+  width: 345px;
+  min-height: 1024px;
+  max-height: 1024px;
+}
+
+@media only screen and (max-width: 1199px) {
+  body:before {
+    min-height: 800px;
+    max-height: inherit;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  body:before {
+    display: none;
+  }
+}
+
+body {
+  padding-top: 121px;
+}
+
+@media screen and (max-width: 1199px) {
+  body {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hide {
+  top: -10em !important;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px !important;
+  height: 48px !important;
+  background-color: #ffc001;
+  font-size: 20px !important;
+  top: 275px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #1f326c;
+  font-size: 20px !important;
+}
+
+.swiper-button-prev::after {
+  content: "\2770" !important;
+}
+.swiper-button-next::after {
+  content: "\2771" !important;
+}
+
+@media screen and (min-width: 991px) {
+  .swiper-button-prev{
+    top: 96% !important;
+    left: 92% !important;
+  }
+
+  .swiper-button-next{
+    top: 96% !important;
+  }
+}

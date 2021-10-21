@@ -1,0 +1,54 @@
+@import "_base";
+@import "./utilities/mixins";
+@import "./theme/color";
+
+.bigText {
+  padding: 9.375em 0;
+  padding-top: 20.625em;
+
+  strong {
+    color: $secondary;
+  }
+
+  @include breakpoint(normal) {
+    padding: 4.375em 0;
+    //   padding-top: 200px;
+  }
+
+  @include breakpoint(ipad) {
+    padding-top: 100px;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1190px;
+
+    @include breakpoint(normal) {
+      max-width: 100%;
+    }
+  }
+}
+
+.contactForm {
+  padding: 9.375em 0;
+
+  @include breakpoint(normal) {
+    padding: 4.375em 0;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1060px;
+    
+    @include breakpoint(normal) {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+@import "_base";
+@import "./utilities/mixins";
+@import "./theme/color";
+
+.contentArea {
+  main {
+    section {
+      position: relative;
+      z-index: 9;
+      padding: 40px 0;
+      background: #f1f4fb;
+
+      @include breakpoint(normal) {
+        padding: 4.375em 0;
+      }
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1190px;
+
+        @include breakpoint(normal) {
+          max-width: 100%;
+        }
+
+        article {
+          display: block;
+
+          header {
+            padding: 40px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            transition: all 0.6s ease-in-out;
+            display: none;
+
+            @include breakpoint(normal) {
+              padding: 20px 0;
+            }
+          }
+
+          .entryContent {
+            position: relative;
+            z-index: 9;
+
+            h2 {
+              font-family: $karlaBold;
+              font-weight: normal;
+              line-height: 1.5;
+              margin: 0 0 25px;
+              font-size: 3em;
+              color: #132662;
+            }
+
+            .awesomeJobsWrapper {
+              .awesomeFilterWrapper {
+                margin: 0 -10px 20px;
+
+                .awesomeFilterItem {
+                  display: inline-block;
+                  padding: 0 10px 10px;
+                  vertical-align: top;
+                  height: 48px;
+                  margin-bottom: 10px;
+
+                  .awsmSelectricWrapper {
+                    position: relative;
+                    cursor: pointer;
+                    min-width: 160px;
+
+                    div {
+                      overflow: hidden;
+                      position: absolute;
+                      width: 100%;
+                      z-index: 10;
+                      height: 48px;
+
+                      select {
+                        font-family: $karlaRegular;
+                        font-size: 0.7em;
+                        padding-left: 2em;
+                        line-height: inherit;
+                        text-transform: none;
+                        word-wrap: normal;
+                        appearance: none;
+                        background-clip: border-box;
+                        margin: 0;
+                        outline: 0;
+                        vertical-align: top;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        z-index: 1;
+                        box-sizing: border-box;
+                        // opacity: 0;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .awesomeJobListing {
+                box-shadow: 0 5px 15px 0 rgb(0 0 0 / 13%);
+
+                .awesomeJobListingItem {
+                  width: 100%;
+                  .awesomeJobItem {
+                    background: #fff;
+                    padding: 20px;
+                    font-size: 14px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+                    display: flex;
+
+                    @include breakpoint(mobile) {
+                      flex-direction: column;
+                    }
+
+                    .awesomeListLeft {
+                    //   float: left;
+                      width: 50%;
+
+                      @include breakpoint(mobile) {
+                        width: 100%;
+                        padding-bottom: 10px;
+                      }
+
+                      .awsmJobPostTitle {
+                        margin: 0 0 15px;
+                        font-size: 18px;
+                        text-align: left;
+                        margin-bottom: 0;
+                        color: #132662;
+                      }
+                    }
+
+                    .awesomeListRight {
+                    //   float: left;
+                      width: 50%;
+                      text-align: right;
+
+                      @include breakpoint(mobile) {
+                        width: 100%;
+                        text-align: left;
+                      }
+
+                      .AwsmJobSpecificationWrapper {
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        @include breakpoint(mobile) {
+                          display: block;
+                          padding-bottom: 5px;
+                          float: none;
+                        }
+
+                        .AwsmJobSpecificationItem {
+                          display: inline-block;
+                          vertical-align: middle;
+                          margin: 0 15px 0 0;
+                        }
+                      }
+
+                      .awsmJobMoreContainer {
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        @include breakpoint(mobile) {
+                          display: block;
+                          float: none;
+                        }
+
+                        a {
+                          text-decoration: none;
+                          transition: all 0.3s ease-in-out 0s;
+
+                          span {
+                            &::before {
+                              content: "\002192";
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

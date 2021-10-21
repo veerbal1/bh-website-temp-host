@@ -1,0 +1,83 @@
+@import "../utilities/mixins";
+@import "../theme/color";
+
+.bannerItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(ipad) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .leftElement {
+    width: 100%;
+    max-width: 565px;
+    margin-right: 125px;
+    text-align: center;
+    position: relative;
+
+    @include breakpoint(normal) {
+      margin-right: 45px;
+      padding-left: 35px;
+    }
+
+    @include breakpoint(ipad) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
+  .rightElement {
+    width: 100%;
+    max-width: 360px;
+
+    @include breakpoint(ipad) {
+      width: 100%;
+      margin: 0 0 30px;
+      max-width: 100%;
+    }
+
+    span {
+      color: #f15050;
+      line-height: 1;
+      display: inline-block;
+      margin-bottom: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.bigText {
+  padding: 9.375em 0;
+  padding-top: 20.625em;
+
+  strong {
+    color: $secondary;
+  }
+
+  @include breakpoint(normal) {
+    padding: 4.375em 0;
+    padding-top: 200px;
+  }
+
+  @include breakpoint(ipad) {
+    padding-top: 100px;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1190px;
+
+    @include breakpoint(normal) {
+      max-width: 100%;
+    }
+  }
+}

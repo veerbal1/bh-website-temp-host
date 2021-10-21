@@ -1,0 +1,23 @@
+@import "_base";
+
+.routeLink {
+  &::after {
+    transition: all 0.3s;
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: -3px;
+    background: #132662;
+    height: 2px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 60%);
+    width: 0;
+
+    &:hover {
+      transition: all 0.3s ease-in-out 0s;
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+}

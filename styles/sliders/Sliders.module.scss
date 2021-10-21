@@ -1,0 +1,296 @@
+@import "../base";
+@import "../theme/color";
+@import "../theme/fonts";
+
+.bannerSlideItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(ipad) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .leftElement {
+    width: 100%;
+    max-width: 565px;
+    margin-right: 125px;
+    text-align: center;
+    position: relative;
+
+    @include breakpoint(normal) {
+      margin-right: 45px;
+      padding-left: 35px;
+    }
+    @include breakpoint(ipad) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
+  .rightElement {
+    width: 100%;
+    max-width: 360px;
+
+    @include breakpoint(ipad) {
+      width: 100%;
+      margin: 0 0 30px;
+      max-width: 100%;
+    }
+    ul {
+      li {
+        display: flex;
+        figure {
+          .bagImage {
+            max-width: 36px;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bannerSliderImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 572px;
+  margin: 0;
+  border: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint(normal) {
+    height: 430px;
+  }
+}
+
+.productSliderSection {
+  padding: 9.375em 0;
+  padding-top: 0 !important;
+  @include breakpoint(normal) {
+    padding: 4.375em 0;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1190px;
+    @include breakpoint(normal) {
+      max-width: 100%;
+    }
+
+    .productSliderWrapper {
+      position: relative;
+
+      // .productSliderNav {
+      //   display: none;
+      // }
+
+      .slickSlider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        user-select: none;
+        touch-action: auto;
+      }
+    }
+  }
+}
+
+.productSliderItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 35px;
+
+  @include breakpoint(normal) {
+    padding-top: 80px;
+    padding-bottom: 35px;
+    flex-direction: row;
+  }
+
+  @include breakpoint(ipad) {
+    padding-top: 30px;
+    flex-direction: column;
+  }
+
+  .leftElement {
+    width: 100%;
+    max-width: 560px;
+    margin-right: 125px;
+
+    @include breakpoint(normal) {
+      margin-right: 50px;
+    }
+
+    @include breakpoint(ipad) {
+      margin: 0 auto;
+    }
+
+    figure {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 725px;
+      margin: 0;
+      border: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+
+      @include breakpoint(ipad) {
+        background-size: contain;
+        height: 500px !important;
+      }
+
+      @include breakpoint(normal) {
+        height: 635px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+      }
+
+      .iframePhone {
+        position: absolute;
+        top: 26px;
+        bottom: 0;
+        left: 6px;
+        right: 0;
+        width: 312px;
+        margin: 0 auto;
+        height: 92%;
+        border-radius: 25px;
+        overflow: hidden;
+
+        @include breakpoint(normal) {
+          top: 23px;
+          bottom: 0;
+          left: 3px;
+          right: 0;
+          width: 272px;
+          height: 92%;
+        }
+
+        @include breakpoint(ipad) {
+          top: 17px;
+          bottom: 0;
+          left: 3px;
+          right: 0;
+          width: 216px;
+          height: 92.2%;
+        }
+      }
+    }
+    .productItemFigure {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 725px;
+      margin: 0;
+      border: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      // background-image: url("https://bighappy.co/wp-content/uploads/2019/11/Screen-Shot-2019-11-11-at-9.17.24-PM.png");
+
+      @include breakpoint(ipad) {
+        height: 500px;
+        background-size: contain;
+      }
+
+      @include breakpoint(normal) {
+        height: 635px;
+      }
+    }
+  }
+
+  .rightElement {
+    width: 100%;
+    max-width: 458px;
+    padding-top: 40px;
+
+    @include breakpoint(ipad) {
+      max-width: 100%;
+    }
+
+    h2 {
+      font-family: $karlaBold;
+      font-weight: normal;
+      margin: 0 0 25px;
+      color: $primary;
+      font-size: 48px;
+      line-height: 55px;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+
+      @include breakpoint(ipad) {
+        font-size: 36px;
+        line-height: 1.3;
+      }
+    }
+
+    p {
+      color: #000;
+      font-size: 16px;
+      line-height: 32px;
+      font-family: $karlaRegular;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        padding-left: 40px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        width: 100%;
+        position: relative;
+        padding-left: 52px;
+        font-family: $karlaBold;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 20px;
+        min-height: 36px;
+        margin-bottom: 30px;
+
+        figure {
+          position: absolute;
+          left: 0;
+          max-width: 32px;
+          top: 3px;
+        }
+      }
+    }
+  }
+}

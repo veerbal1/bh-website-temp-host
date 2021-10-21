@@ -1,0 +1,20 @@
+@import "_base";
+@import "./utilities/mixins";
+@import "./theme/color";
+
+.submitBtn {
+  width: 176px;
+  height: 48px;
+  border: none;
+  border-radius: 0;
+  background-color: #ffc001;
+  color: #132662;
+  font-weight: 900;
+  text-transform: capitalize;
+  font-family: $karlaBold;
+  font-size: 1em;
+
+  &:hover {
+    background-color: #ffc001;
+  }
+}

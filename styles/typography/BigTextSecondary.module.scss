@@ -1,0 +1,30 @@
+@import "../utilities/mixins";
+@import "../theme/fonts";
+@import "../theme/color";
+
+.main {
+  font-family: $karlaBold;
+  font-size: 84px;
+  font-weight: normal;
+  line-height: 90px;
+  letter-spacing: -4px;
+  color: $primary;
+  margin-bottom: 0;
+
+  strong{
+    color: $secondary;
+  }
+
+  @include breakpoint(normal) {
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: -3px;
+  }
+
+  @include breakpoint(ipad) {
+    font-size: 38px;
+    line-height: 1.3;
+    letter-spacing: -1px;
+  }
+
+}

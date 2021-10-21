@@ -1,0 +1,286 @@
+@import "../base";
+@import "../theme/color";
+@import "../theme/fonts";
+
+.footer {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  li,
+  p {
+    font-size: 15px;
+    font-family: $karlaRegular;
+    line-height: 28px;
+    margin-bottom: 0;
+    color: $primary;
+  }
+  .top {
+    padding: 6.875em 0;
+    position: relative;
+
+    @include breakpoint(normal) {
+      padding: 3.75em 0;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1190px;
+
+      @include breakpoint(mobile) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+
+      .leftElement,
+      .rightElement {
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include breakpoint(mobile) {
+          width: 100%;
+        }
+      }
+
+      .leftElement {
+        @include breakpoint(mobile) {
+          margin-bottom: 30px;
+        }
+
+        .innerElement {
+          width: 50%;
+
+          h6 {
+            font-size: 12px;
+            font-family: $karlaBold;
+            color: $primary;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+
+          p {
+            font-size: 15px;
+            font-family: $karlaRegular;
+            line-height: 28px;
+            margin-bottom: 0;
+            color: $primary;
+          }
+
+          ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+              display: inline-block;
+              vertical-align: middle;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .rightElement {
+        padding-left: 65px;
+        justify-content: flex-start;
+
+        @include breakpoint(ipad) {
+          padding-left: 30px;
+        }
+
+        @include breakpoint(mobile) {
+          position: relative;
+          background: $secondary;
+          padding: 30px;
+          flex-direction: column;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 50%;
+          z-index: 1;
+          background: $secondary;
+
+          @include breakpoint(mobile) {
+            width: auto;
+            left: 0;
+          }
+        }
+
+        * {
+          position: relative;
+          z-index: 2;
+        }
+
+        h4 {
+          margin-bottom: 20px;
+          letter-spacing: -1px;
+          color: #fff;
+          font-size: 24px;
+          font-family: $karlaBold;
+          margin-bottom: 20px;
+          letter-spacing: -1px;
+          line-height: 36px;
+
+          @include breakpoint(ipad) {
+            font-size: 18px;
+            line-height: 1.4;
+          }
+        }
+
+        a[href*="mailto:"] {
+          color: inherit;
+          text-decoration: none;
+          font-size: 18px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+  .bottom {
+    padding: 4.0625em 0;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(ipad) {
+      padding: 30px 0;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include breakpoint(ipad) {
+        flex-direction: column;
+      }
+
+      @include breakpoint(mobile) {
+        max-width: 100%;
+      }
+
+      @include breakpoint(normal) {
+        max-width: 100%;
+      }
+
+      .socialLinks {
+        @include breakpoint(ipad) {
+          width: 50%;
+        }
+
+        @include breakpoint(mobile) {
+          width: 100%;
+        }
+
+        ul {
+          @include breakpoint(ipad) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+          li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 25px;
+
+            @include breakpoint(normal) {
+              margin-right: 15px;
+            }
+
+            @include breakpoint(ipad) {
+              margin: 0;
+              width: calc(100% / 4);
+              text-align: center;
+            }
+
+            img {
+              max-width: 65px;
+            }
+
+            @include breakpoint(ipad) {
+              &:first-child {
+                order: 99;
+                width: 100%;
+                margin: 15px auto 0;
+                text-align: center;
+              }
+            }
+
+            a {
+              svg {
+                width: 15px;
+              }
+            }
+
+            img {
+              max-width: 65px;
+              @include breakpoint(ipad) {
+                max-width: 60px;
+              }
+            }
+          }
+        }
+      }
+
+      .quickLinks {
+        @include breakpoint(ipad) {
+          display: none;
+        }
+
+        .menuFooterMenuContainer {
+          ul {
+            li {
+              margin: 0 34px;
+              font-family: $karlaBold;
+              letter-spacing: normal;
+
+              @include breakpoint(normal) {
+                margin: 0 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .copyright {
+        @include breakpoint(ipad) {
+          margin-top: 30px;
+        }
+
+        p {
+          font-family: $karlaBold;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}

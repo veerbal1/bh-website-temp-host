@@ -1,0 +1,142 @@
+@import "_base";
+@import "./utilities/mixins";
+@import "./theme/color";
+
+.adStudioPostWrapper {
+  padding: 9.375em 0;
+
+  @include breakpoint(normal) {
+    padding: 4.375em 0;
+    padding-top: 0 !important;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1190px;
+
+    @include breakpoint(normal) {
+      max-width: 100%;
+    }
+
+    .article {
+      position: relative;
+      background: $primary;
+      min-height: 420px;
+      display: flex;
+      margin-bottom: 100px;
+
+      @include breakpoint(normal) {
+        margin-bottom: 50px;
+        min-height: 350px;
+      }
+
+      @include breakpoint(ipad) {
+        min-height: 250px;
+      }
+
+      @include breakpoint(mobile) {
+        flex-direction: column-reverse;
+      }
+
+      figure {
+        margin: 0 0 1rem;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: block;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        background-color: $primary;
+
+        @include breakpoint(mobile) {
+          width: 100%;
+          height: 230px;
+        }
+
+        &::after {
+          content: " ";
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+          transform-origin: right top;
+          transform: scale3d(1, 1, 1);
+          z-index: 200;
+          background: #fff;
+        }
+      }
+
+      div {
+        display: flex;
+        width: 50%;
+        padding: 60px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include breakpoint(ipad) {
+          padding: 20px;
+        }
+
+        @include breakpoint(mobile) {
+          width: 100%;
+          padding: 30px 40px;
+        }
+      }
+
+      h3 {
+        font-size: 48px;
+        font-family: "Karla-Bold";
+        font-weight: normal;
+        line-height: 60px;
+        letter-spacing: -2px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #f15050;
+
+        @include breakpoint(normal) {
+          font-size: 38px;
+          line-height: 1.2;
+        }
+
+        @include breakpoint(ipad) {
+          font-size: 28px;
+        }
+      }
+      p {
+        font-family: $karlaRegular;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        color: #fff;
+        margin-bottom: 15px;
+        text-align: center;
+        max-width: 410px;
+
+        @include breakpoint(ipad) {
+          font-size: 16px;
+          line-height: 1.7;
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    .article:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      @include breakpoint(mobile) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

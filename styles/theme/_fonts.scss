@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Karla-bold";
+  src: url("../../public/fonts/my-fonts/karla-bold.woff");
+}
+
+@font-face {
+  font-family: "Karla-regular";
+  src: url("../../public/fonts/my-fonts/karla-regular.woff");
+}
+
+$karlaBold: "Karla-bold";
+$karlaRegular: "Karla-regular";
+$sans-serif: "sans-serif";
+$sans-serif-b: "Karla-bold";
+
+$base-font-size: 16px;

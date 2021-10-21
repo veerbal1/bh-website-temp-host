@@ -1,0 +1,17 @@
+@import "_base";
+@import "./utilities/mixins";
+@import "./theme/color";
+
+.bigPadding {
+  padding: 9.375em 0;
+  padding-top: 20.625em;
+
+  @include breakpoint(normal) {
+    padding: 4.375em 0;
+    padding-top: 290px;
+  }
+
+  @include breakpoint(ipad) {
+    padding-top: 100px;
+  }
+}

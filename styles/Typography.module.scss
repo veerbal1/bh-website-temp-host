@@ -1,0 +1,38 @@
+@import "base";
+@import "theme/color";
+@import "theme/fonts";
+
+.smallText {
+  display: block;
+  color: $textSecondary;
+  font-family: "Karla-Bold";
+  font-weight: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.primaryTitle {
+  color: $primary;
+  font-size: 84px;
+  text-transform: capitalize;
+  line-height: 73px;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+  font-family: $karlaBold;
+
+  @include breakpoint(normal) {
+    font-size: 54px;
+    line-height: 1;
+  }
+}
+
+.primaryParagraph {
+  color: $paragraphColor;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Karla-Regular";
+  font-weight: normal;
+  margin-bottom: 25px;
+}
