@@ -11,7 +11,7 @@ function ProductSliderSection({ data, type }) {
           <div className={styles.slider || "slider"}>
             {/* <div className={`${styles.productSliderNav}`}></div> */}
             {/** Nav Slider */}
-            <ProductSliderNav />
+            {/* <ProductSliderNav /> */}
             <ProductSlider data={data} type={type} />
           </div>
         </div>

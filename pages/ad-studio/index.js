@@ -8,12 +8,14 @@ import Layout from "../../component/Wrapper/Layout";
 import Bag from "../../public/bag.png";
 import SunImage from "../../public/images/sun.png";
 import CarImage from "../../public/images/car.png";
-import PostImageFour from "../../public/images/postimage-4.png";
+import PostImageFour from "../../public/images/postImage-4.png";
 import styles from "../../styles/AdStudio.module.scss";
 import { showBodyBeforeElement } from "../../utils";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectFade, Navigation, Autoplay } from "swiper";
+import {withRouter} from "next/router";
+
 SwiperCore.use([EffectFade, Autoplay, Navigation]);
 
 const firstSlider = {
@@ -77,82 +79,6 @@ const firstSlider = {
         {
           icons: Bag,
           text: " EXTREMELY HIGH PERFORMING UNIT IN THE RETAIL, AUTOMOTIVE AND TOURISM VERTICALS",
-        },
-      ],
-    },
-  },
-};
-const secondSlider = {
-  sliderData: {
-    sliderA: {
-      type: "iframe",
-      src: "https://player.vimeo.com/video/362891198?autoplay=1&background=1&loop=1&autopause=0",
-      title: "Capture Attention as Users Scroll",
-      p: "Leverage Big Happy Touch Technology to bring experiences to life over mobile and tablet as the users are scrolling.",
-      list: [
-        {
-          icons: Bag,
-          text: " RESPONSIVE TO THE USERS TOUCH, ADS CAN CHANGE BASED ON THE USER'S INTERACTION WITH THEIR PHONE",
-        },
-        {
-          icons: Bag,
-          text: " CREATE GAMES AND MORE CONSUMER FOCUSED RICH MEDIA UNITS AT EASE WITHIN A FEW DAYS",
-        },
-        {
-          icons: Bag,
-          text: " THESE UNITS HAVE A 30% HIGHER AD RECALL THAN TRADITIONAL AD UNITS",
-        },
-        {
-          icons: Bag,
-          text: " LESS THAN 6 BUSINESS DAY TURNAROUND",
-        },
-      ],
-    },
-    sliderB: {
-      type: "iframe",
-      src: "https://player.vimeo.com/video/362891198?autoplay=1&background=1&loop=1&autopause=0",
-      title: "The Bigger the Better",
-      p: "Leverage the Big Happy platform to create awareness and branding for your products with our Full Screen Interscroller Ads.  These units allow brands more time to drive product info and showcase benefits without intruding on the users experience.",
-      list: [
-        {
-          icons: Bag,
-          text: " TURNKEY CREATIVE PRODUCTION, THAT CAN BE SET LIVE IN LESS THAN 72 HOURS ONCE RECEIPT OF ASSETS",
-        },
-        {
-          icons: Bag,
-          text: " HIGH-QUALITY ANIMATIONS WITH LARGE UNIQUE MOBILE BASED INVENTORY TO DRIVE AWARENESS",
-        },
-        {
-          icons: Bag,
-          text: " CUSTOM-BUILT SIZES THAT WILL STICK OUT TO CONSUMERS",
-        },
-        {
-          icons: Bag,
-          text: " ANIMATED 320X100 AND 320X150 BANNERS STICK OUT AND DRIVE INCREASED BRAND RECALL AND MESSAGING",
-        },
-      ],
-    },
-    sliderC: {
-      type: "iframe",
-      src: "https://player.vimeo.com/video/362891198?autoplay=1&background=1&loop=1&autopause=0",
-      title: "Supercharge Standard TVC Spots",
-      p: "Big Happy video units allow brands to showcase messaging in an efficiently branded way.",
-      list: [
-        {
-          icons: Bag,
-          text: " AMPLIFY VIDEO MESSAGING WITH CUSTOM BRANDED SKINS AND END CARDS TO ATTRACT EYES TO THE VIDEO SPOT AND AN END CARD TO DRIVE USERS DOWN THE PURCHASE FUNNEL",
-        },
-        {
-          icons: Bag,
-          text: " DEPLOY VIDEOS AN ARRAY OF VIEWABLE AD FORMATS WITH STICKY ADHESIVE TECHNOLOGY TO DRIVE STRONG VCRS AND ENGAGEMENT",
-        },
-        {
-          icons: Bag,
-          text: " DRIVE AND TRACK QUARTERLY VIEW GOALS TO MEET INTENDED ENGAGEMENT METRICS",
-        },
-        {
-          icons: Bag,
-          text: " ANIMATED 320X100 AND 320X150 BANNERS STICK OUT AND DRIVE INCREASED BRAND RECALL AND MESSAGING",
         },
       ],
     },
@@ -224,4 +150,4 @@ const AdStudioPostItem = ({ title, description, src = "" }) => {
     </article>
   );
 };
-export default AdStudio;
+export default withRouter(AdStudio);
